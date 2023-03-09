@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page in HTML with CSS Code Example</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="box-form">
+	<div class="left">
+		<div class="overlay">
+			<div class="intro">
+				Instructions for exam
+			</div>
+		<br>
+		<br>●Attempt ALL questions. For each correct answer, you will be awarded 1 mark and for each incorrect answer,
+		0.5 marks will be DEDUCTED from your total.
+		<br><br>
+		● DO NOT SWITCH to any other window during the test. If you do so, you will be logged out automatically and
+		will be DISQUALIFIED from the exam.
+		<br><br>
+		● Also DO NOT press BACK button or RELOAD button during the test. Doing so will result in DIS-QUALIFICATION.
+		<br><br>
+		● Left Hand panel indicates the status of each question using a color code –
+		<br>○ Attempted questions – Green
+		<br>○ Not attempted questions – Grey
+		<br>○ Flagged questions for review – Red flag over Green or Grey as the case may be
+		<br><br>
+		● Your data will be AUTO SAVED every 30 seconds. So, in the case of any system failure, the test can be
+		resumed from where it was terminated.
+		<br><br>
+		● When you are ready to submit the test, press SAVE AND SUBMIT button.
+		<br><br>
+		● The paper will be automatically submitted as soon as the time runs out.
+		<br><br>
+		● The flag is just for the user's convenience and will NOT affect their score in the test.
+		<br><br>
+		● In case you faced any issue while taking test please contact hr@genesistechnologies.in with the details,
+		mentioning your userid.
+		<span>
+			<p>login with social media</p>
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Login with Twitter</a>
+		</span>
+		</div>
+	</div>
+	
+	
+		<div class="right">
+			
+		<h5>LOGIN</h5>
+		<p>Don't have an account? <a href="../Registration/studentRegister.html">Creat Your Account</a> it takes less than a minute</p>
+		<div class="inputs">
+			<form method="post" action="">
+				<input type="text" placeholder="Username Or E-mail" name="username" autofocus="" autocapitalize="none" autocomplete="username" required="" id="id_username">
+				<input type="password" placeholder="Password" name="password" autocomplete="current-password" required="" id="id_password">
+				<i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+			  </form>
+		</div>
+			
+			<br><br>
+			
+		<div class="remember-me--forget-password">
+				<!-- Angular -->
+	<label>
+		<input type="checkbox" name="item" checked/>
+		<span class="text-checkbox">Remember me</span>
+	</label>
+			<p>forget password?</p>
+		</div>
+		<br>
+		<div class="btn">
+			<button type="submit"><a href="#" class="bn">Login</a></button>
+			<!-- <button type="submit">Login2</button> -->
+		</div>
+	</div>
+	
+</div>
+<!-- partial -->
+<script>
+	const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#id_password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+	</script>
+  
+</body>
+</html>
